@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maharashtra Sugarcane Supply Chain Tracker — Macro Climate, Logistics &amp; Mill Portal</title>
+  <!-- Tailwind CSS v3.4.17 & Chart.js v4.4.1 -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Interconnected Project Stylesheet -->
+  <link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body class="bg-slate-100 text-slate-900 antialiased selection:bg-emerald-600 selection:text-white">
+
+  <!-- Main Dynamic Application Viewport -->
+  <div id="app-root"></div>
+
+  <!-- Non-Blocking Toast Notification Container -->
+  <div id="app-toast-container" class="fixed bottom-5 right-5 z-50 pointer-events-none flex flex-col gap-2"></div>
+
+  <!-- System Architecture, Modular Files & Relational DB Schema Modal -->
+  <div id="architecture-modal-backdrop" class="hidden fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-4xl w-full max-h-[88vh] flex flex-col overflow-hidden">
+      <div class="px-6 py-4 bg-slate-900 text-white flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <span class="text-[11px] font-mono-num uppercase text-emerald-400 font-bold">System Architecture &amp; Interconnected Project Files</span>
+          <h3 class="text-base sm:text-lg font-bold">Maharashtra Sugarcane Supply Chain Tracker — Blueprint</h3>
+        </div>
+        <button type="button" onclick="window.ArchitectureModal.close()" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold">Close ✕</button>
+      </div>
+      <div class="px-6 py-2.5 bg-slate-100 border-b border-slate-200 flex flex-wrap items-center gap-2 text-xs font-semibold">
+        <button type="button" onclick="window.ArchitectureModal.setTab('files')" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 shadow-xs border border-slate-300">1. Modular File Structure</button>
+        <button type="button" onclick="window.ArchitectureModal.setTab('java')" class="px-3 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold shadow-xs border border-amber-600">☕ 2. Java 25 Backend Architecture</button>
+        <button type="button" onclick="window.ArchitectureModal.setTab('schema')" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 shadow-xs border border-slate-300">3. PostgreSQL Schema (schema.sql)</button>
+        <button type="button" onclick="window.ArchitectureModal.setTab('routing')" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 shadow-xs border border-slate-300">4. Cross-Portal State &amp; Routing</button>
+      </div>
+      <div id="architecture-modal-body" class="p-6 overflow-y-auto table-scroll flex-1"></div>
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- INTERCONNECTED APPLICATION MODULES (Loaded in Dependency Order)        -->
+  <!-- ====================================================================== -->
+  <script src="src/data/historical_data.js"></script>
+  <script src="src/state/store.js"></script>
+  <script src="src/router/router.js"></script>
+  <script src="src/components/map_engine.js"></script>
+  <script src="src/components/landing_portal.js"></script>
+  <script src="src/components/auth_portal.js"></script>
+  <script src="src/components/farmer_portal.js"></script>
+  <script src="src/components/logistics_portal.js"></script>
+  <script src="src/components/mill_portal.js"></script>
+  <script src="src/components/architecture_modal.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

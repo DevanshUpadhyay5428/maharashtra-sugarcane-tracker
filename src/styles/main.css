@@ -1,0 +1,116 @@
+/* ============================================================================
+   MAHARASHTRA SUGARCANE SUPPLY CHAIN TRACKER — MAIN STYLESHEET
+   File: src/styles/main.css
+   ============================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand-emerald: #065f46;
+  --brand-emerald-light: #10b981;
+  --brand-amber: #d97706;
+  --brand-slate: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars for analytical tables */
+.table-scroll::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.table-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 9999px;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Analytical Table Row Hover & Extreme Highlighting */
+.analytical-table th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f8fafc;
+  backdrop-filter: blur(6px);
+}
+
+.row-highlight-extreme {
+  background: linear-gradient(90deg, rgba(254, 243, 199, 0.45) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.row-highlight-record {
+  background: linear-gradient(90deg, rgba(209, 250, 229, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.row-highlight-deficit {
+  background: linear-gradient(90deg, rgba(254, 226, 226, 0.45) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Interactive Map Container */
+.map-viewport {
+  min-height: 340px;
+  width: 100%;
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated route dash for SVG corridor map */
+@keyframes routeFlow {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.route-line-animated {
+  stroke-dasharray: 8 6;
+  animation: routeFlow 1.6s linear infinite;
+}
+
+/* Pulse marker on maps */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.85;
+  }
+  70% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background-color: currentColor;
+  animation: pulseRing 2s infinite;
+  z-index: -1;
+}
