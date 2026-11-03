@@ -1,5 +1,12 @@
 # Maharashtra Sugarcane Supply Chain Tracker (`MahaCaneGrid`) — Java Mini Project
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-emerald?style=for-the-badge&logo=github)](https://devanshupadhyay5428.github.io/maharashtra-sugarcane-tracker/)
+[![Java](https://img.shields.io/badge/Java-25%20%2F%2021%20%2F%2017-orange?style=for-the-badge&logo=openjdk)](https://github.com/DevanshUpadhyay5428/maharashtra-sugarcane-tracker)
+[![Build](https://img.shields.io/badge/Zero%20Dependencies-Pure%20JDK-blue?style=for-the-badge)](https://github.com/DevanshUpadhyay5428/maharashtra-sugarcane-tracker)
+
+> 🌐 **Live Web Application**: [https://devanshupadhyay5428.github.io/maharashtra-sugarcane-tracker/](https://devanshupadhyay5428.github.io/maharashtra-sugarcane-tracker/)  
+> 📁 **GitHub Repository**: [https://github.com/DevanshUpadhyay5428/maharashtra-sugarcane-tracker](https://github.com/DevanshUpadhyay5428/maharashtra-sugarcane-tracker)
+
 A full-stack, enterprise-grade Java web application tailored to the **Maharashtra Sugarcane & Biofuel Ecosystem**. Developed in pure **Java (OpenJDK 17/21/25)** with an embedded zero-dependency HTTP server, a layered MVC/Service-Repository architecture, and a modern responsive user interface for Farmers, Logistics Transporters, and Sugar Mill Chemists.
 
 ---
